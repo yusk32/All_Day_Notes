@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>１週間のまとめ</title>
+    <link rel="stylesheet" href="css/MatomeStyle.css">
+    <script src="js/JQuery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <!--ロゴ記述領域-->
+        <div class="header-inner">
+            <figure class="header-logo">
+                <a href="">
+                    <img src="">
+                </a>
+            </figure>
+        <!--ロゴ記述領域ここまで-->
+        <!--グローバルナビ領域-->
+        <div class="globalnav">
+            <ul>
+                <li><a href="">目標</a></li>
+                <li><a href="">月間</a></li>
+                <li><a href="">週間</a></li>
+                <li><a href="">課題</a></li>
+                <!--記録では日報と週報が表示されるようにしたい-->
+                <li><a href="">記録</a></li>
+            </ul>
+            </div>
+            <!--グローバルナビ領域ここまで-->
+        </div>
+    </header>
+    <main>
+        <!--1カ月の目標とリアルタイムで表示できるようにしたい-->
+        <div class="monthlytask">
+            <h2 class="title">◎<span id="month"></span>月度の目標</h2>
+            <h3 class="monthlygoal">月目標・実績  <button class="omission" id="button1">▼</button></h3>
+            <div class="list1">
+                <ul>
+                    <li>◎フロント:5人</li>
+                    <li>◎ABC:15件</li>
+                    <li>◎BCまたはやりとり:0/60件</li>
+                    <li>◎新規発信:/100件</li>
+                    <li>◎添削件数:件/40件</li>
+                    <li>◎APに当てる時間:/100時間</li>
+                </ul>
+            </div>
+        </div>
+        <!--１週間の成果をリアルタイム表示したい-->
+        <div class="works">
+            <h3 class="achievements">１週間の実績  <button class="omission" id="button2">▼</button></h3>
+            <div class="list2">
+                <ul>
+                    <li>◎アクションチェック 
+                        <select>
+                            <option>参加</option>
+                            <option>不参加</option>
+                        </select>
+                    </li>
+                    <div class="video_check">
+                        <li>◎ビデオ <input type="number" value=0 min=0 max=50>
+                            本
+                        </li>
+                    </div>
+                    <div class="seminar_participation_check">
+                        <li>◎セミナー<input type="number" value=2 min=0 max=7>
+                            回
+                        </li>
+                    </div>
+                    <div class="book_check">
+                        <li>◎本 <input type="number" value=0 min=0 max=10>
+                            冊
+                        </li>
+                    </div>
+                    <div class="academy_check">
+                        <li>◎アカデミー <input type="number" value=0 min=0 max=100>
+                            本
+                        </li>
+                    </div>
+                    <div class="">
+                        <li>◎アップとの打ち合わせ件数
+                            <input type="number" value=0 min=0 max=10>
+                            件
+                        </li>
+                    </div>
+                    <div class="video_check_name">
+                        <li>◎良かったビデオ
+                            
+                        </li>
+                    </div>
+                    <div class="action_times">
+                        <li>◎セミナー以外の合計活動時間:3時間</li>
+                        <div class="study_times">
+                            <li>勉強時間: <input type="time" value="00:00"></li>
+                        </div>
+                        <div class="action_time">
+                            <li>発信・やりとり時間:<input type="time" value="00:00"></li>
+                        </div>
+                    </div>
+                    <div class="new_send_times">
+                        <li>◎新規発信件数: <input type="number" value="0" min="0" max="1000">件</li>
+                    </div>
+                    <div class="interactions">
+                        <li>◎やりとり件数: <input type="number" value="0" min="0" max="100">件</li>
+                    </div>
+                    <div class="BC">
+                        <li>◎BC: <input type="number" value=0 min=0 max=100></li>
+                    </div>
+                    <div class="">
+                        <li>◎レール件数: <input type="number" value=0 min=0 max=10>件</li>
+                    </div>
+                
+                    <div class="point">
+                        <p>◎良かった点</p>
+                        <textarea class="textarea" id="goodpoint"></textarea>
+                    </div>
+                    <div class="point">
+                        <p>◎改善点 </p>
+                        <textarea class="textarea" id="improvements"></textarea>
+                    </div>
+                </ul>
+            </div>
+            <input type="submit" name="button" value="入力完了">
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/All_Day.js"></script>
+</body>
+</html>
